@@ -12,7 +12,14 @@ touch pages/index.js
 
 ## Getting Started
 
-First, run the development server:
+Firstly, create an environment file
+
+```bash
+echo "DBASVCSAPI_ADMIN_KEY=my-super-secret-admin-key
+DBASVCSAPI_URL=https://the-url-to-the-api.com" > .env.local
+```
+
+Secondly, run the development server:
 
 ```bash
 npm run dev

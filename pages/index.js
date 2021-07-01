@@ -82,7 +82,7 @@ export async function getServerSideProps(context) {
 
 	let accounts = null
   try {
-    accounts = await getDbaServicesAccounts(process.env.DBASVCSAPI_ADMIN_KEY)
+    accounts = await getDbaServicesAccounts(process.env.DBASVCSAPI_URL + '/accounts', process.env.DBASVCSAPI_ADMIN_KEY)
   } catch(e) {
 		console.log(`failed to get accounts: ${e}`);
 		return { 
@@ -91,7 +91,7 @@ export async function getServerSideProps(context) {
 			}
 		};
 	}
-  
+
 	if (!accounts || (accounts && accounts.length == 0)) {
     console.log("returning no data")
 	  return { props: {} }
