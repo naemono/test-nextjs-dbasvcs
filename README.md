@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Steps to get started
+
+```bash
+npx create-next-app dbaservices
+cd dbaservices
+yarn add react-bootstrap@2.0.0-beta.2
+touch components/accounts_table.js lib/dbasvcsapi.js
+touch pages/index.js
+```
+
 ## Getting Started
 
 First, run the development server:
